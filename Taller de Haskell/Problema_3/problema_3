@@ -1,0 +1,16 @@
+# Bloque try-except para manejar errores durante la entrada y la operación de división
+try:
+    # Solicita al usuario que ingrese el dividendo y lo convierte a entero
+    a = int(input("Digite el dividendo: "))
+    # Solicita al usuario que ingrese el divisor y lo convierte a entero
+    b = int(input("Digite el divisor: "))
+    # Realiza la división entre los dos números ingresados
+    resultado = a / b
+    # Muestra el resultado de la división usando una f-string para formatear el texto
+    print(f"El resultado de la división es: {resultado}")
+# Maneja el error si el usuario intenta dividir entre cero
+except ZeroDivisionError:
+    print("No se puede dividir entre cero.")
+# Maneja el error si el usuario ingresa un valor que no puede convertirse a entero
+except ValueError:
+    print("Entrada inválida. Por favor, ingrese solo números.")
